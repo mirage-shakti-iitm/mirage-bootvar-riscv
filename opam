@@ -1,0 +1,32 @@
+version: "0.3.0"
+opam-version: "2.0"
+name:         "mirage-bootvar-riscv"
+maintainer:   "Sai Venkata Krishnan <saiganesha5.svkv@gmail.com>"
+homepage:     "https://github.com/mirage/mirage-bootvar-riscv"
+bug-reports:  "https://github.com/mirage/mirage-bootvar-riscv/issues/"
+dev-repo:     "git+https://github.com/mirage/mirage-bootvar-riscv.git"
+license:      "ISC"
+authors: [
+  "Dan Williams <djwillia@us.ibm.com>"
+  "Magnus Skjegstad <magnus@skjegstad.com>"
+  "Martin Lucina <martin@lucina.net>"
+]
+tags: [
+  "org:mirage"
+]
+build: [
+  ["ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%"  "--toolchain" "riscv"]
+]
+install: [["opam-installer" "--prefix=%{prefix}%/riscv-sysroot" "mirage-bootvar-riscv.install"]]
+
+depends: [
+  "ocaml" {= "4.07.0"}
+  "ocamlfind" {build}
+  "ocamlbuild" {build}
+  "topkg" {build}
+  "ocaml-riscv"
+  "mirage-riscv" 
+  "lwt-riscv"
+  "parse-argv-riscv"
+]
+synopsis: "Riscv implementation of MirageOS Bootvar interface"

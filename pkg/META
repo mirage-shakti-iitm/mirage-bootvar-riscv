@@ -1,0 +1,9 @@
+description = "Library for reading MirageOS unikernel boot parameters in riscv"
+version = "0.3.0"
+requires = "lwt mirage-riscv parse-argv"
+archive(byte) = "mirage-bootvar-riscv.cma"
+archive(native) = "mirage-bootvar-riscv.cmxa"
+plugin(byte) = "mirage-bootvar-riscv.cma"
+plugin(native) = "mirage-bootvar-riscv.cmxs"
+exists_if = "mirage-bootvar-riscv.cma"
+
