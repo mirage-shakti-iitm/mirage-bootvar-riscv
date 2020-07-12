@@ -15,6 +15,7 @@ tags: [
   "org:mirage"
 ]
 build: [
+  [make "add-cap-files"]
   ["ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%"  "--toolchain" "riscv"]
 ]
 install: [["opam-installer" "--prefix=%{prefix}%/riscv-sysroot" "mirage-bootvar-riscv.install"]]
