@@ -14,6 +14,8 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  *
  *)
+open Bootvar_cap_tee
+
 external get_cmd_line : unit -> string = "mirage_riscv_get_cmdline"
 
 let argv () =
