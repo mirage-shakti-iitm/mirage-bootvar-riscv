@@ -1,4 +1,4 @@
-true: asm, bin_annot, safe_string, principal
+true: asm, bin_annot, safe_string, principal, function-sections
 true: warn(A-44)
 
 <lib> : include
