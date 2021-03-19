@@ -1,0 +1,4 @@
+(library
+  (name bootvar)
+  (public_name mirage-bootvar-riscv)
+  (libraries lwt mirage-riscv parse-argv))
